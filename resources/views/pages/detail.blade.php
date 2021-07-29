@@ -130,7 +130,7 @@
         <div class="border-b-2 border-gray-300 mt-10"></div>
         <a href="{{ url('class-details') }}" class="grid grid-cols-5 my-10 items-center hover:bg-pink-200 px-3 py-5 rounded-lg transition-all">
           <div class="col-span-2">
-            <img src="/images/banner-3.svg" class="w-72">
+            <img src="{{ asset('/images/banner-3.svg') }}" class="w-72">
           </div>
           <div class="col-span-3">
             <div class="flex-col space-y-2">
@@ -144,7 +144,7 @@
         <div class="border-b-2 border-gray-300"></div>
         <a href="{{ url('class-details') }}" class="grid grid-cols-5 my-10 items-center hover:bg-pink-200 px-3 py-5 rounded-lg transition-all">
           <div class="col-span-2">
-            <img src="/images/banner-3.svg" class="w-72">
+            <img src="{{ asset('/images/banner-3.svg') }}" class="w-72">
           </div>
           <div class="col-span-3">
             <div class="flex-col space-y-2">
@@ -158,7 +158,7 @@
         <div class="border-b-2 border-gray-300"></div>
         <a href="{{ url('class-details') }}" class="grid grid-cols-5 my-10 items-center hover:bg-pink-200 px-3 py-5 rounded-lg transition-all">
           <div class="col-span-2">
-            <img src="/images/banner-3.svg" class="w-72">
+            <img src="{{ asset('/images/banner-3.svg') }}" class="w-72">
           </div>
           <div class="col-span-3">
             <div class="flex-col space-y-2">
@@ -172,7 +172,7 @@
         <div class="border-b-2 border-gray-300"></div>
         <a href="{{ url('class-details') }}" class="grid grid-cols-5 my-10 items-center hover:bg-pink-200 px-3 py-5 rounded-lg transition-all">
           <div class="col-span-2">
-            <img src="/images/banner-3.svg" class="w-72">
+            <img src="{{ asset('/images/banner-3.svg') }}" class="w-72">
           </div>
           <div class="col-span-3">
             <div class="flex-col space-y-2">
