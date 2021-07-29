@@ -3,8 +3,8 @@
   Insight e-Learning
 @endsection
 @section('content')
-     <div class="container mx-10">
-      <div class="flex justify-around gap-8 mt-5 items-center mb-32 mr-0 sm:mr-10 md:mr-0">
+     <div class="container mx-auto">
+      <div class="flex justify-around gap-8 mt-5 items-center mb-32">
         <div class="flex-col text-black">
           <h1 class="text-5xl font-bold leading-normal mb-3" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="200">Virtual courses <br> for you</h1>
           <p class="text-gray-400 text-xl mb-10" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="100">Complete Distance Learning (CPL) platform <br> solution with video conferencing, and <br> integrated with SIAKAD</p>
@@ -22,38 +22,38 @@
       </div>
       <div class="grid grid-cols-12 gap-5 mx-5">
         <a href="#" class="col-span-2 text-black p-8 bg-pink-600 rounded-lg text-center hover:bg-pink-700" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-          <div class="bg-gray-200 rounded-full">
-            <img src="{{ asset('/images/category-1.svg')}}" class="w-16 mx-auto py-5">
+          <div class="bg-gray-200 rounded-full p-7">
+            <img src="{{ asset('/images/category-1.svg')}}" class="mx-auto">
           </div>
           <p class="text-white font-bold text-sm w-max mt-5 mx-auto">Machine Learning</p>
         </a>
         <a href="#" class="col-span-2 text-black p-8 bg-pink-600 rounded-lg text-center hover:bg-pink-700" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-          <div class="bg-gray-200 rounded-full">
-            <img src="{{ asset('/images/category-2.svg')}}" class="w-16 mx-auto py-5">
+          <div class="bg-gray-200 rounded-full p-7">
+            <img src="{{ asset('/images/category-2.svg')}}" class="mx-auto">
           </div>
           <p class="text-white font-bold text-sm w-max mt-5 mx-auto">Backend</p>
         </a>
         <a href="#" class="col-span-2 text-black p-8 bg-pink-600 rounded-lg text-center hover:bg-pink-700" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-          <div class="bg-gray-200 rounded-full">
-            <img src="{{ asset('/images/category-3.svg')}}" class="w-16 mx-auto py-5">
+          <div class="bg-gray-200 rounded-full p-7">
+            <img src="{{ asset('/images/category-3.svg')}}" class="mx-auto">
           </div>
           <p class="text-white font-bold text-sm w-max mt-5 mx-auto">Web Developer</p>
         </a>
         <a href="#" class="col-span-2 text-black p-8 bg-pink-600 rounded-lg text-center hover:bg-pink-700" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-          <div class="bg-gray-200 rounded-full">
-            <img src="{{ asset('/images/category-4.svg')}}" class="w-16 mx-auto py-5">
+          <div class="bg-gray-200 rounded-full p-7">
+            <img src="{{ asset('/images/category-4.svg')}}" class="mx-auto">
           </div>
           <p class="text-white font-bold text-sm w-max mt-5 mx-auto">Debugger</p>
         </a>
         <a href="#" class="col-span-2 text-black p-8 bg-pink-600 rounded-lg text-center hover:bg-pink-700" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
-          <div class="bg-gray-200 rounded-full">
-            <img src="{{ asset('/images/category-5.svg')}}" class="w-16 mx-auto py-5">
+          <div class="bg-gray-200 rounded-full p-7">
+            <img src="{{ asset('/images/category-5.svg')}}" class="mx-auto">
           </div>
           <p class="text-white font-bold text-sm w-max mt-5 mx-auto">System Security</p>
         </a>
         <a href="#" class="col-span-2 text-black p-8 bg-pink-600 rounded-lg text-center hover:bg-pink-700" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
-          <div class="bg-gray-200 rounded-full">
-            <img src="{{ asset('/images/category-6.svg')}}" class="w-16 mx-auto py-5">
+          <div class="bg-gray-200 rounded-full p-7">
+            <img src="{{ asset('/images/category-6.svg')}}" class="mx-auto">
           </div>
           <p class="text-white font-bold text-sm w-max mt-5 mx-auto">Frontend</p>
         </a>
@@ -67,52 +67,52 @@
       <div class="grid grid-cols-8 gap-5 mx-5">
         <div class="col-span-2 bg-white rounded-md shadow-lg p-7 flex-col">
           <img src="{{ asset('/images/banner-1.svg')}}" alt="">
-          <p class="text-black text-center text-md font-bold mt-5">Disini tuh judulnya pengennya dibatesin gitu....</p>
+          <p class="text-black text-center text-md font-bold mt-5">Lorem ipsum dolor sit amet, Lorem ipsum Lorem ipsum dolor sit amet, dolor sit amet, </p>
           <div class="border-b-2 border-gray-300 my-8"></div>
           <div class="flex gap-3 items-center">
             <img src="{{ asset('/images/profile.svg')}}" class="w-10">
             <div class="flex-col">
-              <p class="text-black text-left font-bold"> Saitama Juragan</p>
-              <p class="text-gray-400 text-left text-sm"> Ceo Indofood</p>
+              <p class="text-black text-left font-bold"> Dummies Name </p>
+              <p class="text-gray-400 text-left text-sm"> Dummies Title </p>
             </div>
           </div>
           <button class="bg-pink-700 px-5 py-2 mt-14 rounded-full w-full text-white hover:bg-pink-600 transition-all">View Class</button>
         </div>
         <div class="col-span-2 bg-white rounded-md shadow-lg p-7 flex-col">
           <img src="{{ asset('/images/banner-1.svg')}}" alt="">
-          <p class="text-black text-center text-md font-bold mt-5">Disini tuh judulnya pengennya dibatesin gitu....</p>
+          <p class="text-black text-center text-md font-bold mt-5">Lorem ipsum dolor sit amet, Lorem ipsum Lorem ipsum dolor sit amet, dolor sit amet,</p>
           <div class="border-b-2 border-gray-300 my-8"></div>
           <div class="flex gap-3 items-center">
             <img src="{{ asset('/images/profile.svg')}}" class="w-10">
             <div class="flex-col">
-              <p class="text-black text-left font-bold"> Saitama Juragan</p>
-              <p class="text-gray-400 text-left text-sm"> Ceo Indofood</p>
+              <p class="text-black text-left font-bold"> Dummies Name </p>
+              <p class="text-gray-400 text-left text-sm"> Dummies Title </p>
             </div>
           </div>
           <button class="bg-pink-700 px-5 py-2 mt-14 rounded-full w-full text-white hover:bg-pink-600 transition-all">View Class</button>
         </div>
         <div class="col-span-2 bg-white rounded-md shadow-lg p-7 flex-col">
           <img src="{{ asset('/images/banner-1.svg')}}" alt="">
-          <p class="text-black text-center text-md font-bold mt-5">Disini tuh judulnya pengennya dibatesin gitu....</p>
+          <p class="text-black text-center text-md font-bold mt-5">Lorem ipsum dolor sit amet, Lorem ipsum Lorem ipsum dolor sit amet, dolor sit amet,</p>
           <div class="border-b-2 border-gray-300 my-8"></div>
           <div class="flex gap-3 items-center">
             <img src="{{ asset('/images/profile.svg')}}" class="w-10">
             <div class="flex-col">
-              <p class="text-black text-left font-bold"> Saitama Juragan</p>
-              <p class="text-gray-400 text-left text-sm"> Ceo Indofood</p>
+              <p class="text-black text-left font-bold"> Dummies Name </p>
+              <p class="text-gray-400 text-left text-sm"> Dummies Title </p>
             </div>
           </div>
           <button class="bg-pink-700 px-5 py-2 mt-14 rounded-full w-full text-white hover:bg-pink-600 transition-all">View Class</button>
         </div>
         <div class="col-span-2 bg-white rounded-md shadow-lg p-7 flex-col">
           <img src="{{ asset('/images/banner-1.svg')}}" alt="">
-          <p class="text-black text-center text-md font-bold mt-5">Disini tuh judulnya pengennya dibatesin gitu....</p>
+          <p class="text-black text-center text-md font-bold mt-5">Lorem ipsum dolor sit amet, Lorem ipsum Lorem ipsum dolor sit amet, dolor sit amet,</p>
           <div class="border-b-2 border-gray-300 my-8"></div>
           <div class="flex gap-3 items-center">
             <img src="{{ asset('/images/profile.svg')}}" class="w-10">
             <div class="flex-col">
-              <p class="text-black text-left font-bold"> Saitama Juragan</p>
-              <p class="text-gray-400 text-left text-sm"> Ceo Indofood</p>
+              <p class="text-black text-left font-bold"> Dummies Name </p>
+              <p class="text-gray-400 text-left text-sm"> Dummies Title </p>
             </div>
           </div>
           <button class="bg-pink-700 px-5 py-2 mt-14 rounded-full w-full text-white hover:bg-pink-600 transition-all">View Class</button>
@@ -127,88 +127,92 @@
       <div class="grid grid-cols-8 gap-5 mx-5">
         <div class="col-span-2 bg-white rounded-md shadow-lg p-7 flex-col">
           <img src="{{ asset('/images/banner-1.svg')}}" alt="">
-          <p class="text-black text-center text-md font-bold mt-5">Disini tuh judulnya pengennya dibatesin gitu....</p>
+          <p class="text-black text-center text-md font-bold mt-5">Lorem ipsum dolor sit amet, Lorem ipsum Lorem ipsum dolor sit amet, dolor sit amet,</p>
           <div class="border-b-2 border-gray-300 my-8"></div>
           <div class="flex gap-3 items-center">
             <img src="{{ asset('/images/profile.svg')}}" class="w-10">
             <div class="flex-col">
-              <p class="text-black text-left font-bold"> Saitama Juragan</p>
-              <p class="text-gray-400 text-left text-sm"> Ceo Indofood</p>
+              <p class="text-black text-left font-bold"> Dummies Name </p>
+              <p class="text-gray-400 text-left text-sm"> Dummies Title </p>
             </div>
           </div>
           <button class="bg-pink-700 px-5 py-2 mt-14 rounded-full w-full text-white hover:bg-pink-600 transition-all">View Class</button>
         </div>
         <div class="col-span-2 bg-white rounded-md shadow-lg p-7 flex-col">
           <img src="{{ asset('/images/banner-1.svg')}}" alt="">
-          <p class="text-black text-center text-md font-bold mt-5">Disini tuh judulnya pengennya dibatesin gitu....</p>
+          <p class="text-black text-center text-md font-bold mt-5">Lorem ipsum dolor sit amet, Lorem ipsum Lorem ipsum dolor sit amet, dolor sit amet,</p>
           <div class="border-b-2 border-gray-300 my-8"></div>
           <div class="flex gap-3 items-center">
             <img src="{{ asset('/images/profile.svg')}}" class="w-10">
             <div class="flex-col">
-              <p class="text-black text-left font-bold"> Saitama Juragan</p>
-              <p class="text-gray-400 text-left text-sm"> Ceo Indofood</p>
+              <p class="text-black text-left font-bold"> Dummies Name </p>
+              <p class="text-gray-400 text-left text-sm"> Dummies Title </p>
             </div>
           </div>
           <button class="bg-pink-700 px-5 py-2 mt-14 rounded-full w-full text-white hover:bg-pink-600 transition-all">View Class</button>
         </div>
         <div class="col-span-2 bg-white rounded-md shadow-lg p-7 flex-col">
           <img src="{{ asset('/images/banner-1.svg')}}" alt="">
-          <p class="text-black text-center text-md font-bold mt-5">Disini tuh judulnya pengennya dibatesin gitu....</p>
+          <p class="text-black text-center text-md font-bold mt-5">Lorem ipsum dolor sit amet, Lorem ipsum Lorem ipsum dolor sit amet, dolor sit amet,</p>
           <div class="border-b-2 border-gray-300 my-8"></div>
           <div class="flex gap-3 items-center">
             <img src="{{ asset('/images/profile.svg')}}" class="w-10">
             <div class="flex-col">
-              <p class="text-black text-left font-bold"> Saitama Juragan</p>
-              <p class="text-gray-400 text-left text-sm"> Ceo Indofood</p>
+              <p class="text-black text-left font-bold"> Dummies Name </p>
+              <p class="text-gray-400 text-left text-sm"> Dummies Title </p>
             </div>
           </div>
           <button class="bg-pink-700 px-5 py-2 mt-14 rounded-full w-full text-white hover:bg-pink-600 transition-all">View Class</button>
         </div>
         <div class="col-span-2 bg-white rounded-md shadow-lg p-7 flex-col">
           <img src="{{ asset('/images/banner-1.svg')}}" alt="">
-          <p class="text-black text-center text-md font-bold mt-5">Disini tuh judulnya pengennya dibatesin gitu....</p>
+          <p class="text-black text-center text-md font-bold mt-5">Lorem ipsum dolor sit amet, Lorem ipsum Lorem ipsum dolor sit amet, dolor sit amet,</p>
           <div class="border-b-2 border-gray-300 my-8"></div>
           <div class="flex gap-3 items-center">
             <img src="{{ asset('/images/profile.svg')}}" class="w-10">
             <div class="flex-col">
-              <p class="text-black text-left font-bold"> Saitama Juragan</p>
-              <p class="text-gray-400 text-left text-sm"> Ceo Indofood</p>
+              <p class="text-black text-left font-bold"> Dummies Name </p>
+              <p class="text-gray-400 text-left text-sm"> Dummies Title </p>
             </div>
           </div>
           <button class="bg-pink-700 px-5 py-2 mt-14 rounded-full w-full text-white hover:bg-pink-600 transition-all">View Class</button>
         </div>
       </div>
-      
-      {{--  --}}
+    </div>
 
-      <div class="bg-pink-700 h-72 mt-40 mb-48 -ml-20 -mr-20" id="count">
-         <div class="container mx-14">
-           <div class="grid grid-cols-8 py-8 w-max mx-40 gap-20">
-             <div class="span-cols flex-cols text-center" data-aos="zoom-in" data-aos-duration="1500">
-               <img src="{{ asset('/images/banner-1.svg')}}" class="w-40">
-               <p class="text-white font-bold text-5xl mt-5 value" akhi="666">0</p>
-               <p class="text-white font-bold text-xl mt-5">Million Learners</p>
-             </div>
-             <div class="span-cols flex-cols text-center" data-aos="zoom-in" data-aos-duration="1500">
-               <img src="{{ asset('/images/banner-1.svg')}}" class="w-40">
-               <p class="text-white font-bold text-5xl mt-5 value" akhi="666">0</p>
-               <p class="text-white font-bold text-xl mt-5">Graduates</p>
-             </div>
-             <div class="span-cols flex-cols text-center" data-aos="zoom-in" data-aos-duration="1500">
-               <img src="{{ asset('/images/banner-1.svg')}}" class="w-40">
-               <p class="text-white font-bold text-5xl mt-5 value" akhi="666">0</p>
-               <p class="text-white font-bold text-xl mt-5">Courses</p>
-             </div>
-             <div class="span-cols flex-cols text-center" data-aos="zoom-in" data-aos-duration="1500">
-               <img src="{{ asset('/images/banner-1')}}.svg" class="w-40">
-               <p class="text-white font-bold text-5xl mt-5 value" akhi="666">0</p>
-               <p class="text-white font-bold text-xl mt-5">Countries</p>
-             </div>
-           </div>
-         </div>
+      {{-- Counter --}}
+
+      <div class="container-fluid bg-pink-700" id="count">
+        <div class="h-72 mt-40 mb-48">
+          <div class="flex">
+            <div class="mx-auto flex pt-12 space-x-52 items-center">
+            <div class="flex-cols text-center" data-aos="zoom-in" data-aos-duration="1500">
+              <img src="{{ asset('/images/learn.svg')}}" class="w-20 mx-auto">
+              <p class="text-white font-bold text-5xl mt-5 value mx-auto" akhi="666">0</p>
+              <p class="text-white font-bold text-xl mt-5 w-auto">Learners</p>
+            </div>
+            <div class="flex-cols text-center" data-aos="zoom-in" data-aos-duration="1500">
+              <img src="{{ asset('/images/graduated.svg')}}" class="w-20 mx-auto">
+              <p class="text-white font-bold text-5xl mt-5 value mx-auto" akhi="666">0</p>
+              <p class="text-white font-bold text-xl mt-5 mx-auto">Graduates</p>
+            </div>
+            <div class="flex-cols text-center" data-aos="zoom-in" data-aos-duration="1500">
+              <img src="{{ asset('/images/coursed.svg')}}" class="w-20 mx-auto">
+              <p class="text-white font-bold text-5xl mt-5 value mx-auto" akhi="666">0</p>
+              <p class="text-white font-bold text-xl mt-5 mx-auto">Courses</p>
+            </div>
+            <div class="flex-cols text-center" data-aos="zoom-in" data-aos-duration="1500">
+              <img src="{{ asset('/images/countries.svg')}}" class="w-20 mx-auto">
+              <p class="text-white font-bold text-5xl mt-5 value mx-auto" akhi="666">0</p>
+              <p class="text-white font-bold text-xl mt-5 mx-auto">Countries</p>
+            </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     {{-- Second Banner --}}
+    <div class="container mx-auto">
       <div class="flex justify-around gap-8 mt-5 items-center mb-32 mr-0 sm:mr-10 md:mr-0 flex-row-reverse">
         <div class="flex-col text-black">
           <h1 class="text-5xl font-bold leading-normal mb-3" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="200">Find a convenient way to learn</h1>
@@ -229,9 +233,8 @@
           <div class="flex gap-3 items-center">
             <img src="{{ asset('/images/profile.svg')}}" class="w-20">
             <div class="flex-col w-full">
-              <p class="text-white text-lg text-left font-bold">Saitama Juragan</p>
-              <p class="text-white text-left text-sm"> Ceo Indofood</p>
-            </div>
+              <p class="text-white text-lg text-left font-bold">Dummies Name </p>
+              <p class="text-white text-left text-sm"> Ceo IndofoodDummies Title             </div>
           </div>
           <p class="text-white mt-7">Insight bukan cuma ngajarin gue untuk lulus ujian, gue juga belajar untuk berpikir kritis dan jadi pembelajar yang mandiri</p>
         </div>
@@ -239,9 +242,8 @@
           <div class="flex gap-3 items-center">
             <img src="{{ asset('/images/profile.svg')}}" class="w-20">
             <div class="flex-col w-full">
-              <p class="text-white text-lg text-left font-bold">Saitama Juragan</p>
-              <p class="text-white text-left text-sm"> Ceo Indofood</p>
-            </div>
+              <p class="text-white text-lg text-left font-bold">Dummies Name </p>
+              <p class="text-white text-left text-sm"> Ceo IndofoodDummies Title             </div>
           </div>
           <p class="text-white mt-7">Insight bukan cuma ngajarin gue untuk lulus ujian, gue juga belajar untuk berpikir kritis dan jadi pembelajar yang mandiri</p>
         </div>
@@ -249,9 +251,8 @@
           <div class="flex gap-3 items-center">
             <img src="{{ asset('/images/profile.svg')}}" class="w-20">
             <div class="flex-col w-full">
-              <p class="text-white text-lg text-left font-bold">Saitama Juragan</p>
-              <p class="text-white text-left text-sm"> Ceo Indofood</p>
-            </div>
+              <p class="text-white text-lg text-left font-bold">Dummies Name </p>
+              <p class="text-white text-left text-sm"> Ceo IndofoodDummies Title             </div>
           </div>
           <p class="text-white mt-7">Insight bukan cuma ngajarin gue untuk lulus ujian, gue juga belajar untuk berpikir kritis dan jadi pembelajar yang mandiri adlkfjahsdfiuaehwfyi agisaduhfoiueahjfhdkslfkjsadhf iuhieuwafha ksdfhsjad hfiuwagfiaslksdfg</p>
         </div>
@@ -259,9 +260,8 @@
           <div class="flex gap-3 items-center">
             <img src="{{ asset('/images/profile.svg')}}" class="w-20">
             <div class="flex-col w-full">
-              <p class="text-white text-lg text-left font-bold">Saitama Juragan</p>
-              <p class="text-white text-left text-sm"> Ceo Indofood</p>
-            </div>
+              <p class="text-white text-lg text-left font-bold">Dummies Name </p>
+              <p class="text-white text-left text-sm"> Ceo IndofoodDummies Title             </div>
           </div>
           <p class="text-white mt-7">Insight bukan cuma ngajarin gue untuk lulus ujian, gue juga belajar untuk berpikir kritis dan jadi pembelajar yang mandiri</p>
         </div>

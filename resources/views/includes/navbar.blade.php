@@ -8,6 +8,11 @@
           <img class="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" />
         </button>
       </div>
+      <div class="toggle hidden md:flex w-5/6 text-right text-bold mt-5 md:mt-0 border-t-2 border-gray-400 md:border-none">
+        <a href="{{ url('/') }}" class="block md:inline-block text-gray-400 hover:text-black md:hover:border-black px-3 py-3 border-b-2 border-gray-400 md:border-transparent transition-all font-bold">HOME</a>
+        <a href="{{ url('classes') }}" class="block md:inline-block text-gray-400 hover:text-black md:hover:border-black px-3 py-3 border-b-2 border-gray-400 md:border-transparent transition-all font-bold">CLASSES</a>
+        <a href="#about" class="block md:inline-block text-gray-400 hover:text-black md:hover:border-black px-3 py-3 border-b-2 border-gray-400 md:border-transparent transition-all font-bold">ABOUT</a>
+      </div>
       <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-t-2 border-gray-400 md:border-none">
         <a href="{{ url('/') }}" class="block md:inline-block text-gray-400 hover:text-black md:hover:border-black px-3 py-3 border-b-2 border-gray-400 md:border-transparent transition-all">Home</a>
         <a href="{{ url('classes') }}" class="block md:inline-block text-gray-400 hover:text-black md:hover:border-black px-3 py-3 border-b-2 border-gray-400 md:border-transparent transition-all">Classes</a>

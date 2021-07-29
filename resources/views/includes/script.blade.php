@@ -40,9 +40,9 @@
     var navbar = document.getElementById('navbar');
     document.onscroll = function() {
         if (document.documentElement.scrollTop > 0) {
-            navbar.classList.add('shadow-lg','transition-all')
+            navbar.classList.add('bg-pink-50', 'shadow-lg', 'transition-all')
         } else {
-            navbar.classList.remove('shadow-lg','transition-all')
+            navbar.classList.remove('bg-pink-50', 'shadow-lg','transition-all')
         }
     }
 
