@@ -9,7 +9,7 @@
 </head>
 <body class="bg-pink-50 overflow-x-hidden">
   {{-- Navbar --}}
-  @include('includes.navbar-auth')
+  @include('includes.navbar')
   
   {{-- Page Content --}}
   @yield('content')

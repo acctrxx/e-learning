@@ -3,11 +3,11 @@
   Insight Chapter Details
 @endsection
 @section('content')
-  <div class="container mx-10">
+  <div class="container mx-auto px-5">
     <h1 class="text-black text-2xl font-bold my-12">Class / <span class="text-gray-400 font-normal">Chapter Details</span></h1>
-    <div class="grid grid-cols-6 gap-7 items-start mb-20">
+    <div class="grid grid-cols-6 items-start gap-7 mb-20">
       <div class="col-span-4">
-        <iframe class="rounded-lg shadow-lg border border-gray-300" width="800px" height="500px" src="https://www.youtube.com/embed/Jz2nAmRXMS8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <iframe class="rounded-lg shadow-lg border border-gray-300" width="820px" height="500px" src="https://www.youtube.com/embed/Jz2nAmRXMS8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="col-span-2">
         <div class="flex-col border-2 border-gray-300 shadow-lg rounded-lg p-5 overflow-auto" style="height: 500px;">

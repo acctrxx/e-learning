@@ -39,11 +39,11 @@
                         <i class="bi bi-shield-lock"></i>
                     </div>
                 </div>
-                <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Sign Up</button>
+                <button style="background: #d30c55;" class="btn text-white btn-block btn-lg shadow-lg mt-5">Sign Up</button>
             </form>
             <div class="text-center mt-5 text-lg fs-4">
                 <p class='text-gray-600'>Already have an account? <a href="auth-login.html"
-                        class="font-bold">Log
+                        class="font-bold" style="color: #d30c55;">Log
                         in</a>.</p>
             </div>
         </div>

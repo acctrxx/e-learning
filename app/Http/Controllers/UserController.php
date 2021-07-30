@@ -41,7 +41,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $data = User::findorfail($id);
-        return view('users.edit', compact('data'));
+        return view('pages.admin.users.edit', compact('data'));
     }
 
     public function update(Request $request, $id)
@@ -50,7 +50,7 @@ class UserController extends Controller
 
         $request->validate([
             'name' => 'required|min:8|max:25',
-            'email' => 'required|min:8|max:25|email:rfc,dns|unique:users,email',
+            'email' => 'required|min:8|max:25|email:rfc,dns',
             'current_password' => 'required',
             'password' => 'required|min:8|max:25|confirmed',
             'image_file' => 'required'
