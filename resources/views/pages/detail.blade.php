@@ -3,7 +3,7 @@
   Insight Classes
 @endsection
 @section('content')
-  <div class="container mx-10">
+  <div class="container mx-auto px-10">
     <h1 class="text-3xl font-bold text-black">All Classes</h1>
     <div class="grid grid-cols-3 gap-10">
       <div class="col-span-1 mt-10">

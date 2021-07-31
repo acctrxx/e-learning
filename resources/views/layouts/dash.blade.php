@@ -34,6 +34,9 @@
         </div>
     </div>
     @include('layouts.footer')
+    @stack('prepend-script')
+    @include('includes.script')
+    @stack('addon-script')
 </body>
 
 </html>

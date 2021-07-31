@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.dash')
 @section('title', 'Categories')
 @section('main_title', 'Categories Page')
 @section('content')
@@ -7,16 +7,17 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>List Articles</h4>
+                    <h4 style="color: #d30c55;">List Articles</h4>
                 </div>
                 <div class="card-content">
                     <!-- table hover -->
                     <div class="table-responsive">
                         <table class="table table-hover mb-0">
                             <thead>
-                                <tr>
-                                  <th>CATEGORY</th>
-                                  <th>USED</th>
+                                <tr style="color: #d30c55;">
+                                  <th>NAME</th>
+                                  <th>PHOTO</th>
+                                  <th>SLUG</th>
                                   <th>ACTION</th>
                                 </tr>
                             </thead>
@@ -24,7 +25,8 @@
                               @foreach ($data as $item)
                                 <tr>
                                     <td class="text-bold-500">{{ $item->name }}</td>
-                                    <td class="text-bold-500">{{ $item->article->count() }}</td>
+                                    <td><img style="height: 40px;" src="{{ asset('profile/' . $item->photo) }}" alt=""></td>
+                                    <td class="text-bold-500">{{ $item->slug }}</td>
                                     <td class="d-flex">
                                         <a href="{{ route('category.edit', $item->id) }}"><i class="bi bi-pencil-square" style="font-size: 25px;"></i></a>
                                         <div class="mx-2">|</div>

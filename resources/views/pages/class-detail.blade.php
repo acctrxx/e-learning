@@ -7,7 +7,7 @@
     <h1 class="text-black text-2xl font-bold my-12">Home / <span class="text-gray-400 font-normal">Class Details</span></h1>
     <div class="grid grid-cols-6 gap-7 items-start mb-20">
       <div class="col-span-4">
-        <iframe class="rounded-lg shadow-lg" width="820px" height="500px" src="https://www.youtube.com/embed/Jz2nAmRXMS8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <iframe class="rounded-lg shadow-lg border w-full border-gray-300" height="500px" src="https://www.youtube.com/embed/Jz2nAmRXMS8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="col-span-2">
         <div class="flex-col border-2 border-gray-300 shadow-lg rounded-lg p-5 overflow-auto" style="height: 500px;">
@@ -79,7 +79,7 @@
     <div class="mt-10 flex-col">
       <h1 class="text-black font-bold text-3xl w-3/5 leading-relaxed">5 Menit menjadi Fullstack DeveloperMenit menjadi Fullstack DeveloperMenit menjadi Fullstack Developer</h1>
       <div class="flex space-x-3 items-center mt-10">
-        <img src="/images/profile.svg" class="w-14">
+        <img src="{{ asset('/images/profile.svg') }}" class="w-14">
         <div class="flex-col">
           <p class="text-black font-bold text-lg">
             Muhammad Pepet
@@ -96,7 +96,7 @@
         Student Review ( 3 )
       </div>
       <div class="flex space-x-3 items-start my-20">
-        <img src="/images/profile.svg" class="w-14">
+        <img src="{{ asset('/images/profile.svg') }}" class="w-14">
         <div class="flex-col">
           <p class="text-black font-bold text-lg">
             Muhammad Pepet
@@ -107,7 +107,7 @@
         </div>
       </div>
       <div class="flex space-x-3 items-start my-20">
-        <img src="/images/profile.svg" class="w-14">
+        <img src="{{ asset('/images/profile.svg') }}" class="w-14">
         <div class="flex-col">
           <p class="text-black font-bold text-lg">
             Muhammad Pepet
@@ -118,7 +118,7 @@
         </div>
       </div>
       <div class="flex space-x-3 items-start my-20">
-        <img src="/images/profile.svg" class="w-14">
+        <img src="{{ asset('/images/profile.svg') }}" class="w-14">
         <div class="flex-col">
           <p class="text-black font-bold text-lg">
             Muhammad Pepet

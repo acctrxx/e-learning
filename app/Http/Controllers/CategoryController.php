@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
@@ -12,28 +13,36 @@ class CategoryController extends Controller
     {
         $data = Category::all();
         $users = User::all();
-        return view('categories.index', compact('data', 'users'));
+        return view('pages.admin.categories.index', compact('data', 'users'));
     }
 
     public function create()
     {
         $data = Category::all();
-        return view('categories.create', ['data' => $data]);
+        return view('pages.admin.categories.create', ['data' => $data]);
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
+            'photo' => 'required|image'
         ]);
-        Category::create($request->all());
+        $image = $request->file('photo');
+        $new_name_image = time() . '.' .  $image->getClientOriginalExtension();
+        $image->move(public_path('profile'), $new_name_image);
+        $request->merge([
+            'photo' => $new_name_image
+        ]);
+        $data = request()->all();
+        $data['slug'] = Str::slug($request->name);
+        Category::create($data);
         return redirect()->route('category.index');
     }
 
     public function edit($id)
     {
         $data = Category::findorfail($id);
-        return view('categories.edit', compact('data'));
+        return view('pages.admin.categories.edit', compact('data'));
     }
 
     public function update(Request $request, $id)
@@ -53,5 +62,19 @@ class CategoryController extends Controller
     $data = Category::findorfail($id);
         $data->delete();
         return back();
+    }
+
+    public function uploadImage($image)
+    {
+        $new_name_image = time() . '.' .  $image->getClientOriginalExtension();
+        $image->move(public_path('profile'), $new_name_image);
+        return $new_name_image;
+    }
+
+    public function removeImage($image)
+    {
+        if (file_exists($image)) {
+            unlink('profile/' . $image);
+        }
     }
 }

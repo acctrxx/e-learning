@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ClassController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,6 +44,22 @@ Route::get('/dashboard', function () {
     return view('pages.admin.dashboard');
 });
 
+Route::get('/detail', function () {
+    return view('pages.admin.classes.detail');
+});
+
+Route::get('/chapter-create', function () {
+    return view('pages.admin.chapters.create');
+});
+
+Route::get('/chapter', function () {
+    return view('pages.admin.chapters.index');
+});
+
+Route::get('/chapter-video-create', function () {
+    return view('pages.admin.chapters.create-video');
+});
+
 
 Route::prefix('/users')->group(function () {
     Route::get('/all', [UserController::class, 'index'])->name('user.index');
@@ -61,3 +79,12 @@ Route::prefix('/categories')->group(function () {
     Route::get('/delete/{id}', [CategoryController::class, 'destroy'])->name('category.delete');
 });
 
+Route::prefix('/classes')->group(function () {
+    Route::get('/all', [ClassController::class, 'index'])->name('class.index');
+    Route::post('/create', [ClassController::class, 'store'])->name('class.store');
+    Route::get('/create', [ClassController::class, 'create'])->name('class.create');
+    Route::get('/detail/{id}', [ClassController::class, 'show'])->name('class.detail');
+    Route::get('/edit/{id}', [ClassController::class, 'edit'])->name('class.edit');
+    Route::put('/update/{id}', [ClassController::class, 'update'])->name('class.update');
+    Route::get('/delete/{id}', [ClassController::class, 'destroy'])->name('class.delete');
+});
