@@ -13,8 +13,8 @@
         <div class="sidebar-menu">
             <ul class="menu">
                 <li class="sidebar-title">Menu</li>
-                    <li class="sidebar-item" style="{{ (request()->is('dashboard')) ? 'background: #D30C55; color: #fff;' : '' }}">
-                        <a href="{{ url('dashboard') }}" class='sidebar-link'>
+                    <li class="sidebar-item">
+                        <a href="{{ url('dashboard') }}" class='sidebar-link'  style="{{ (request()->is('dashboard')) ? 'background: #d30c55; color: #fff;' : '' }}">
                             <i class="bi bi-house-door-fill"></i>
                             <span>Dashboard</span>
                         </a>
@@ -65,23 +65,22 @@
                         </ul>
                     </li>
 
-                    <li class="sidebar-item" style="{{ (request()->is('dashboard')) ? 'background: #D30C55; color: #fff;' : '' }}">
-                        <a href="{{-- url('dashboard') --}}" class='sidebar-link'>
+                    <li class="sidebar-item">
+                        <a href="{{-- url('dashboard') --}}" class='sidebar-link' style="{{ (request()->is('')) ? 'background: #d30c55; color: #fff;' : '' }}">
                             <i class="bi bi-gear-fill"></i>
                             <span>Setting</span>
                         </a>
                     </li>
-                    
                    
-                {{-- <li class="sidebar-item">
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class='sidebar-link btn btn-danger text-dark'>
-                        <i class="bi bi-box-arrow-left text-dark"></i>
+                <li class="sidebar-item">
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class='sidebar-link btn' style="color: #d30c55;">
+                        <i class="bi bi-door-open-fill" style="color: #E9C2D1;"></i>
                         <span>Logout</span>
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
-                </li> --}}
+                </li>
             </ul>
         </div>
         <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>

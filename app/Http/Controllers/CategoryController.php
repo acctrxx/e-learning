@@ -24,17 +24,9 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'photo' => 'required|image'
-        ]);
-        $image = $request->file('photo');
-        $new_name_image = time() . '.' .  $image->getClientOriginalExtension();
-        $image->move(public_path('profile'), $new_name_image);
-        $request->merge([
-            'photo' => $new_name_image
-        ]);
         $data = request()->all();
         $data['slug'] = Str::slug($request->name);
+        $data['photo'] = $request->file('photo')->store('assets/category', 'public');
         Category::create($data);
         return redirect()->route('category.index');
     }
@@ -47,13 +39,11 @@ class CategoryController extends Controller
 
     public function update(Request $request, $id)
     {
-        $data = Category::find($id);
-
-        $request->validate([
-            'name' => 'required',
-        ]);
-
-        $data->update($request->all());
+        $data = $request->all();
+        $data['slug'] = Str::slug($request->name);
+        $data['photo'] = $request->file('photo')->store('assets/category', 'public');
+        $item = Category::findOrFail($id);
+        $item->update($data);
         return redirect()->route('category.index');
     }
 

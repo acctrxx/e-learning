@@ -27,7 +27,7 @@
                                 <tr style="color: #8f3f5c;">
                                     <td class="text-bold-500">{{ $item->name }}</td>
                                     <td>{{ $item->email }}</td>
-                                    <td class="text-bold-500"><img style="height: 40px; border-radius: 50%;" src="{{ asset('profile/' . $item->image) }}" alt=""></td>
+                                    <td class="text-bold-500"><img style="height: 40px; border-radius: 50%;" src="{{ asset('storage/' . $item->image) }}" alt=""></td>
                                     <td>{{ $item->role }}</td>
                                     <td>
                                         <div class="d-flex">

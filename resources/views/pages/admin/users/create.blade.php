@@ -36,7 +36,7 @@
       </div>
       <div class="form-group">
         <label for="helperText" style="color: #d30c55;">Image</label>
-        <input value="{{ old('image') }}" type="file" id="helperText" class="form-control" name="image_file" placeholder="Image">
+        <input value="{{ old('image') }}" type="file" id="helperText" class="form-control" name="image" placeholder="Image">
       </div>
       <button class="btn text-white" style="background: #d30c55;">Sumbit</button>
     </div>

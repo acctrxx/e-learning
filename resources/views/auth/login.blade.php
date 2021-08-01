@@ -18,7 +18,7 @@
                 </div>
               @endif
 
-              <form action="" method="POST">
+              <form action="{{ route('loginProccess') }}" method="POST">
                 @csrf
                 @method('POST')
                   <div class="form-group position-relative has-icon-left mb-4">

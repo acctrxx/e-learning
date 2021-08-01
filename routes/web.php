@@ -3,6 +3,7 @@
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ClassController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,14 +33,6 @@ Route::get('/chapter', function () {
     return view('pages.chapter');
 });
 
-Route::get('/login', function () {
-    return view('auth.login');
-});
-
-Route::get('/register', function () {
-    return view('auth.register');
-});
-
 Route::get('/dashboard', function () {
     return view('pages.admin.dashboard');
 });
@@ -58,6 +51,14 @@ Route::get('/chapter-index', function () {
 
 Route::get('/chapter-video-create', function () {
     return view('pages.admin.chapters.create-video');
+});
+
+Route::prefix('auth')->group(function () {
+    Route::get('/login', [AuthController::class, 'login'])->name('login');
+    Route::get('/register', [AuthController::class, 'register'])->name('register');
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::post('/loginProccess', [AuthController::class, 'loginProccess'])->name('loginProccess');
+    Route::post('/registerProccess', [AuthController::class, 'registerProccess'])->name('registerProccess');
 });
 
 

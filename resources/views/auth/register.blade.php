@@ -12,7 +12,7 @@
             <h1 class="auth-title">Sign Up</h1>
             <p class="auth-subtitle mb-5">Input your data to register to our website.</p>
 
-            <form action="" method="POST">
+            <form action="{{ route('registerProccess') }}" method="POST" enctype="multipart/form-data">
               @csrf
               @method('POST')
                 <div class="form-group position-relative has-icon-left mb-4">
@@ -37,6 +37,12 @@
                     <input name="password_confirmation" type="password" class="form-control form-control-xl" value="" placeholder="Confirm Password" required autocomplete="new-password">
                     <div class="form-control-icon">
                         <i class="bi bi-shield-lock"></i>
+                    </div>
+                </div>
+                <div class="form-group position-relative has-icon-left mb-4">
+                    <input name="image" type="file" class="form-control form-control-xl" value="" required>
+                    <div class="form-control-icon">
+                        <i class="bi bi-image-fill"></i>
                     </div>
                 </div>
                 <button style="background: #d30c55;" class="btn text-white btn-block btn-lg shadow-lg mt-5">Sign Up</button>

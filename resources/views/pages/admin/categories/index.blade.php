@@ -25,7 +25,7 @@
                               @foreach ($data as $item)
                                 <tr>
                                     <td class="text-bold-500">{{ $item->name }}</td>
-                                    <td><img style="height: 40px;" src="{{ asset('profile/' . $item->photo) }}" alt=""></td>
+                                    <td><img style="height: 40px;" src="{{ asset('storage/' . $item->photo) }}" alt=""></td>
                                     <td class="text-bold-500">{{ $item->slug }}</td>
                                     <td class="d-flex">
                                         <a href="{{ route('category.edit', $item->id) }}"><i class="bi bi-pencil-square" style="font-size: 25px;"></i></a>
