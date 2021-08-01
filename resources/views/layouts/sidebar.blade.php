@@ -3,7 +3,7 @@
 
     $dashboard = [
         'title' => 'Dashboard',
-        'url' => '/dashboard'
+        'url' => url('/dashboard')
     ]; 
     $class = [
         'title' => 'My Class',
@@ -12,11 +12,11 @@
         'childrens' => [
             [
             'title' => 'List Class',
-            'url' => '/classes/all'
+            'url' => url('/classes/all')
             ],
             [
                 'title' => 'Create Class',
-                'url' => '/classes/create'
+                'url' => url('/classes/create')
             ]
         ]
     ];
@@ -27,11 +27,11 @@
         'childrens' => [
             [
             'title' => 'List User',
-            'url' => '/users/all'
+            'url' => url('/users/all')
             ],
             [
                 'title' => 'Create User',
-                'url' => '/users/create'
+                'url' => url('/users/create')
             ]
         ]
     ];
@@ -42,11 +42,11 @@
         'childrens' => [
             [
             'title' => 'List Category',
-            'url' => '/categories/all'
+            'url' => url('/categories/all')
             ],
             [
                 'title' => 'Create Category',
-                'url' => '/categories/create'
+                'url' => url('/categories/create')
             ]
         ]
     ];
