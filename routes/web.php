@@ -52,7 +52,7 @@ Route::get('/chapter-create', function () {
     return view('pages.admin.chapters.create');
 });
 
-Route::get('/chapter', function () {
+Route::get('/chapter-index', function () {
     return view('pages.admin.chapters.index');
 });
 
