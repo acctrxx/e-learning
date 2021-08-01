@@ -1,64 +1,3 @@
-@php
-    $current_path = '/' . request()->path();
-
-    $dashboard = [
-        'title' => 'Dashboard',
-        'url' => url('/dashboard')
-    ]; 
-    $class = [
-        'title' => 'My Class',
-        'url' => '#',
-        'icon' => 'bi bi-person-fill',
-        'childrens' => [
-            [
-            'title' => 'List Class',
-            'url' => url('/classes/all')
-            ],
-            [
-                'title' => 'Create Class',
-                'url' => url('/classes/create')
-            ]
-        ]
-    ];
-    $user = [
-        'title' => 'User',
-        'url' => '#',
-        'icon' => 'bi bi-file-text-fill',
-        'childrens' => [
-            [
-            'title' => 'List User',
-            'url' => url('/users/all')
-            ],
-            [
-                'title' => 'Create User',
-                'url' => url('/users/create')
-            ]
-        ]
-    ];
-    $category = [
-        'title' => 'Category',
-        'url' => '#',
-        'icon' => 'bi bi-tags-fill',
-        'childrens' => [
-            [
-            'title' => 'List Category',
-            'url' => url('/categories/all')
-            ],
-            [
-                'title' => 'Create Category',
-                'url' => url('/categories/create')
-            ]
-        ]
-    ];
-    $setting = [
-        'title' => 'Setting',
-        'url' => '#',
-        'icon' => 'bi bi-gear-fill'
-    ];
-
-    $menus = [$dashboard, $class, $category, $user, $setting];
-@endphp
-
 <div id="sidebar" class="active">
     <div class="sidebar-wrapper active">
         <div class="sidebar-header">
@@ -74,38 +13,66 @@
         <div class="sidebar-menu">
             <ul class="menu">
                 <li class="sidebar-title">Menu</li>
-                @foreach ($menus as $menu)
-                    @if (isset($menu['childrens']))
-                        @php
-                            $isActive = false;
-                            foreach ($menu['childrens'] as $child) {
-                                if($child['url'] == $current_path){
-                                    $isActive = true;
-                                }
-                            }
-                        @endphp
-                        <li class="sidebar-item has-sub {{ $isActive ? 'active' : ''}}">
-                            <a href="{{ $menu['url'] }}" class='sidebar-link'>
-                                <i class="{{ $menu['icon'] }}"></i>
-                                <span>{{ $menu['title'] }}</span>
-                            </a>
-                            <ul class="submenu {{ $isActive ? 'active' : '' }}">
-                                @foreach ($menu['childrens'] as $item)
-                                <li class="submenu-item ">
-                                    <a href="{{ $item['url'] }}">{{ $item['title'] }}</a>
-                                </li>
-                                @endforeach
-                            </ul>
-                        </li>
-                    @else
-                        <li class="sidebar-item {{$current_path == $menu['url'] ? 'active' : ''}} ">
-                            <a href="{{ $menu['url'] }}" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>{{ $menu['title'] }}</span>
-                            </a>
-                        </li>
-                    @endif
-                @endforeach
+                    <li class="sidebar-item" style="{{ (request()->is('dashboard')) ? 'background: #D30C55; color: #fff;' : '' }}">
+                        <a href="{{ url('dashboard') }}" class='sidebar-link'>
+                            <i class="bi bi-house-door-fill"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item has-sub">
+                        <a href="#" class='sidebar-link' style='{{ (request()->is('classes/all')) ? 'background: #D30C55; color: #fff;' : '' }} {{ (request()->is('classes/create')) ? 'background: #D30C55; color: #fff;' : '' }}'>
+                            <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                            <span>My Class</span>
+                        </a>
+                        <ul class="submenu {{ (request()->is('classes/all')) ? 'active' : '' }} {{ (request()->is('classes/create')) ? 'active' : '' }}">
+                            <li class="submenu-item ">
+                                <a href="{{ url('classes/all') }}">List Class</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('classes/create') }}">Create Class</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item has-sub">
+                        <a href="#" class='sidebar-link' style='{{ (request()->is('categories/all')) ? 'background: #D30C55; color: #fff;' : '' }} {{ (request()->is('categories/create')) ? 'background: #D30C55; color: #fff;' : '' }}'>
+                            <i class="bi bi-tags-fill"></i>
+                            <span>Category</span>
+                        </a>
+                        <ul class="submenu {{ (request()->is('categories/all')) ? 'active' : '' }} {{ (request()->is('categories/create')) ? 'active' : '' }}">
+                            <li class="submenu-item ">
+                                <a href="{{ url('categories/all') }}">List Category</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('categories/create') }}">Create Category</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item has-sub">
+                        <a href="#" class='sidebar-link' style='{{ (request()->is('users/all')) ? 'background: #D30C55; color: #fff;' : '' }} {{ (request()->is('users/create')) ? 'background: #D30C55; color: #fff;' : '' }}'>
+                            <i class="bi bi-person-circle"></i>
+                            <span>User</span>
+                        </a>
+                        <ul class="submenu {{ (request()->is('users/all')) ? 'active' : '' }} {{ (request()->is('users/create')) ? 'active' : '' }}">
+                            <li class="submenu-item ">
+                                <a href="{{ url('users/all') }}">List User</a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('users/create') }}">Create User</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item" style="{{ (request()->is('dashboard')) ? 'background: #D30C55; color: #fff;' : '' }}">
+                        <a href="{{-- url('dashboard') --}}" class='sidebar-link'>
+                            <i class="bi bi-gear-fill"></i>
+                            <span>Setting</span>
+                        </a>
+                    </li>
+                    
+                   
                 {{-- <li class="sidebar-item">
                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class='sidebar-link btn btn-danger text-dark'>
                         <i class="bi bi-box-arrow-left text-dark"></i>
