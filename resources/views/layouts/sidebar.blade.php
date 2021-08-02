@@ -66,7 +66,7 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a href="{{-- url('dashboard') --}}" class='sidebar-link' style="{{ (request()->is('')) ? 'background: #d30c55; color: #fff;' : '' }}">
+                        <a href="{{ url('admin/setting') }}" class='sidebar-link' style="{{ (request()->is('admin/setting')) ? 'background: #d30c55; color: #fff;' : '' }}">
                             <i class="bi bi-gear-fill"></i>
                             <span>Setting</span>
                         </a>

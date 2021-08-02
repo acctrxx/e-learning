@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 @section('title')
-  Insight Login
+  Insight Register
 @endsection
 @section('content')
     <div class="row h-100">

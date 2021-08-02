@@ -3,6 +3,8 @@
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ClassController;
+use App\Http\Controllers\SettingController;
+use App\Http\Controllers\SettingAdminController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,6 +39,10 @@ Route::get('/dashboard', function () {
     return view('pages.admin.dashboard');
 });
 
+Route::get('/dashboard-user', function () {
+    return view('pages.student.dashboard');
+});
+
 Route::get('/detail', function () {
     return view('pages.admin.classes.detail');
 });
@@ -61,6 +67,19 @@ Route::prefix('auth')->group(function () {
     Route::post('/registerProccess', [AuthController::class, 'registerProccess'])->name('registerProccess');
 });
 
+Route::prefix('user')->group(function () {
+    Route::get('/setting', [SettingController::class, 'account'])
+        ->name('settings-account');
+    Route::post('/update/{redirect}', [SettingController::class, 'update'])
+        ->name('settings-redirect');
+});
+
+Route::prefix('admin')->group(function () {
+    Route::get('/setting', [SettingAdminController::class, 'account'])
+        ->name('settings-account');
+    Route::post('/update/{redirect}', [SettingAdminController::class, 'update'])
+        ->name('settings-redirect');
+});
 
 Route::prefix('/users')->group(function () {
     Route::get('/all', [UserController::class, 'index'])->name('user.index');
