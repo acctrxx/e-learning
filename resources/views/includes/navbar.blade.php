@@ -10,7 +10,7 @@
       </div>
       <div class="toggle hidden md:flex w-5/6 text-right text-bold mt-5 md:mt-0 border-t-2 border-gray-400 md:border-none">
         <a href="{{ url('/') }}" class="{{ request()->path() === '/' ? 'text-black border-black' : 'text-gray-400' }} block md:inline-block border-transparent hover:text-black md:hover:border-black px-3 py-3 border-b-2 transition-all font-bold">HOME</a>
-        <a href="{{ url('classes') }}" class="{{ request()->path() === 'classes' ? 'text-black border-black' : 'text-gray-400' }} block md:inline-block border-transparent hover:text-black md:hover:border-black px-3 py-3 border-b-2 transition-all font-bold">CLASSES </a>
+        <a href="{{ url('classes') }}" class="{{ (request()->is('classes')) ? 'text-black border-black' : 'text-gray-400' }} {{ (request()->is('class-details')) ? 'text-black border-black' : 'text-gray-400' }} block md:inline-block border-transparent hover:text-black md:hover:border-black px-3 py-3 border-b-2 transition-all font-bold">CLASSES </a>
         <a href="#about" class="{{ request()->path() === 'about' ? 'text-black border-black' : 'text-gray-400 border-gray-400' }} block md:inline-block hover:text-black md:hover:border-black px-3 py-3 border-b-2 md:border-transparent transition-all font-bold">ABOUT</a>
       </div>
       <div class="flex space-x-3">
