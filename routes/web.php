@@ -69,16 +69,16 @@ Route::prefix('auth')->group(function () {
 
 Route::prefix('user')->group(function () {
     Route::get('/setting', [SettingController::class, 'account'])
-        ->name('settings-account');
+        ->name('user-settings-account');
     Route::post('/update/{redirect}', [SettingController::class, 'update'])
-        ->name('settings-redirect');
+        ->name('user-settings-redirect');
 });
 
 Route::prefix('admin')->group(function () {
     Route::get('/setting', [SettingAdminController::class, 'account'])
-        ->name('settings-account');
+        ->name('admin-settings-account');
     Route::post('/update/{redirect}', [SettingAdminController::class, 'update'])
-        ->name('settings-redirect');
+        ->name('admin-settings-redirect');
 });
 
 Route::prefix('/users')->group(function () {
