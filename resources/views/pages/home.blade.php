@@ -9,10 +9,10 @@
           <h1 class="text-5xl font-bold leading-normal mb-3" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="200">Virtual courses <br> for you</h1>
           <p class="text-gray-400 text-xl mb-10" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="100">Complete Distance Learning (CPL) platform <br> solution with video conferencing, and <br> integrated with SIAKAD</p>
           <a href="#">
-            <span class="bg-pink-700 rounded-full text-white font-bold px-8 py-3 hover:bg-pink-600 transition-all cursor-pointer" >Learn Today</span>
+            <span class="bg-pink-700 rounded-full text-white font-bold px-8 py-3 hover:bg-pink-600 transition-all cursor-pointer">Learn Today</span>
           </a>
         </div>
-          <img src="{{ asset('/images/banner-1.svg')}}" class="h-96 hidden md:block">
+          <img src="{{ asset('/images/banner-1.svg')}}" class="h-96 hidden md:block" data-aos="fade-left" data-aos-duration="2000">
       </div>
 
     {{-- Trend Categories --}}

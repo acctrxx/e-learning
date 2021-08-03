@@ -3,94 +3,69 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Chapter;
+use App\Models\ChapterGalleries;
 use App\Models\Classes;
+use App\Models\Review;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class ClassController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $data = Classes::all();
-        return view('pages.admin.classes.index', compact('data'));
-    }
+        $classes = Classes::get();
+        $categories = Category::get();
+        $users = User::get();
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+        return view('pages.detail', ['classes' => $classes, 'categories' => $categories, 'users' => $users]);
+    }
+    public function detail($id)
     {
-        $data = Classes::all();
-        $users = User::all();
-        $categories = Category::all();
-        return view('pages.admin.classes.create', compact('data', 'users', 'categories'));
+        $classes = Classes::findOrFail($id);
+
+        $chapters = Chapter::where('class_id', $id)->get();
+        $categories = Category::get();
+        $users = User::get();
+
+        return view('pages.class-detail', ['classes' => $classes, 'categories' => $categories, 'users' => $users, 'chapters' => $chapters]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    public function chapter_galleries($classId, $videoId)
+    {
+        $videos = ChapterGalleries::where('class_id', $classId)->find($videoId);
+        $classes = Classes::find($classId);
+
+
+        return view('pages.chapter', ['videos' => $videos, 'classes' => $classes]);
+    }
+
+    // review
+
     public function store(Request $request)
     {
-        
+        // $review = Review::get();
+
+        $data = $request->all();
+        Review::create($data);
+        return back();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function review($id)
     {
-        $data = Classes::findorfail($id);
-        
-        return view('pages.admin.classes.detail', compact('data'));
-    }
+        $classes = Classes::findOrFail($id);
+        $chapters = Chapter::where('class_id', $id)->get();
+        $categories = Category::get();
+        $users = User::get();
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        $data = Classes::all();
-        $users = User::all();
-        $categories = Category::all();
-        return view('pages.admin.classes.create', compact('data', 'users', 'categories'));
-    }
+        $reviews = Review::where('class_id', $id)->get();
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return view('pages.class_detail_review', [
+            'classes' => $classes,
+            'categories' => $categories,
+            'users' => $users,
+            'chapters' => $chapters,
+            'reviews' => $reviews
+        ]);
     }
 }

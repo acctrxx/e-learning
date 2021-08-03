@@ -9,9 +9,9 @@
         </button>
       </div>
       <div class="toggle hidden md:flex w-5/6 text-right text-bold mt-5 md:mt-0 border-t-2 border-gray-400 md:border-none">
-        <a href="{{ url('/') }}" class="{{ request()->path() === '/' ? 'text-black border-black' : 'text-gray-400' }} block md:inline-block border-transparent hover:text-black md:hover:border-black px-3 py-3 border-b-2 transition-all font-bold">HOME</a>
-        <a href="{{ url('classes') }}" class="{{ (request()->is('classes')) ? 'text-black border-black' : 'text-gray-400' }} {{ (request()->is('class-details')) ? 'text-black border-black' : 'text-gray-400' }} {{ (request()->is('chapter')) ? 'text-black border-black' : 'text-gray-400' }} block md:inline-block border-transparent hover:text-black md:hover:border-black px-3 py-3 border-b-2 transition-all font-bold">CLASSES </a>
-        <a href="#about" class="{{ (request()->is('/#about')) ? 'text-black border-black' : 'text-gray-400' }} block md:inline-block hover:text-black md:hover:border-black px-3 py-3 border-b-2 md:border-transparent transition-all font-bold">ABOUT</a>
+        <a href="{{ url('/') }}" class="{{ request()->path() === '/' ? 'text-pink-700 border-pink-700' : 'text-gray-400' }} block md:inline-block border-transparent hover:text-pink-700 hover:border-pink-700 px-3 py-3 border-b-2 transition-all font-bold">HOME</a>
+        <a href="{{ url('classes') }}" class="{{ (request()->is('classes')) ? 'text-pink-700 border-pink-700' : 'text-gray-400' }} {{ (request()->is('class-details')) ? 'text-pink-700 border-pink-700' : 'text-gray-400' }} {{ (request()->is('chapter')) ? 'text-pink-700 border-pink-700' : 'text-gray-400' }} block md:inline-block border-transparent hover:text-pink-700 hover:border-pink-700 px-3 py-3 border-b-2 transition-all font-bold">CLASSES </a>
+        <a href="#about" class="{{ (request()->is('/#about')) ? 'text-pink-700 border-pink-700' : 'text-gray-400' }} block md:inline-block hover:text-pink-700 hover:border-pink-700 px-3 py-3 border-b-2 md:border-transparent transition-all font-bold">ABOUT</a>
       </div>
       <div class="flex space-x-3">
         @guest
@@ -23,7 +23,7 @@
             <div @click="open = !open" class="relative border-b-4 border-transparent py-3" :class="{'border-pink-700 transform transition duration-300 ': open}" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100">
               <div class="flex justify-center items-center space-x-3 cursor-pointer">
                 <div class="w-10 h-10 rounded-full overflow-hidden border-2 dark:border-white border-pink-700">
-                  <img src="storage/{{ Auth::user()->image }}" alt="" class="w-full h-full object-cover">
+                  <img src="{{ asset('storage/' . Auth::user()->image) }}" alt="" class="w-full h-full object-cover">
                 </div>
                 <div class="font-semibold dark:text-white text-gray-900 text-md">
                   <div class="cursor-pointer">Hi, {{ Auth::user()->name }}</div>
